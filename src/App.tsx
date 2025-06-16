@@ -1,10 +1,24 @@
+import React from 'react'
+import Banner from './components/banner'
 import './App.css'
+import ProductIntroduction from './components/products'
+import Contact from './components/contact'
+import Footer from './components/footer'
+import { useEffect } from 'react'
+import { initAnimation, initGsap } from './utils/animation'
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    initGsap()
+    initAnimation()
+  }, [])
   return (
-    <>
-      <div className=" text-8xl">abcde</div>
-    </>
+    <div>
+      <Banner />
+      <ProductIntroduction />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 
