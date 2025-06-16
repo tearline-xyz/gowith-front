@@ -82,7 +82,10 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div className="pt-[3.55rem] pb-[6.21rem] text-[1.8rem] font-medium text-center">
+      <div
+        className="pt-[3.55rem] pb-[6.21rem] text-[1.8rem] font-medium text-center"
+        data-footer-anmine=""
+      >
         Copyright © 2025 GowithAi
       </div>
     </div>
