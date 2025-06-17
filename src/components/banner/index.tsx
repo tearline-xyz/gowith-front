@@ -49,7 +49,7 @@ function Banner() {
           loop
           autoPlay
           playsInline
-          className=" h-full object-cover absolute top-0 left-0"
+          className="w-full h-full object-cover absolute top-0 left-0"
         />
         <div className="relative z-10 mt-[18.5rem] ml-[14.4rem] space-y-[1rem]">
           <div

@@ -1,4 +1,3 @@
-import React from 'react'
 import Banner from './components/banner'
 import './App.css'
 import ProductIntroduction from './components/products'

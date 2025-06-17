@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Contact = () => {
   return (
     <div id="contact" className="mt-[20.8rem] mb-[26.8rem] font-alexandria">

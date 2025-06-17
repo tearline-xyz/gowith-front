@@ -1,5 +1,3 @@
-import React from 'react'
-
 const WhatIsGowithai = () => {
   return (
     <div className="mt-[26.8rem] mb-[12.2rem] relative w-[70.7rem] mx-auto text-center font-alexandria">

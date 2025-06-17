@@ -1,4 +1,3 @@
-import React from 'react'
 import Products from './products'
 import WhatIsGowithai from './what-is-gowithai'
 
