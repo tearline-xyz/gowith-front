@@ -36,27 +36,25 @@ export const initAnimation = () => {
       })
     })
   })
-  document
-    .querySelectorAll('[animation-button]')
-    .forEach((ele: any, index: number) => {
-      gsap.set(ele, {
-        opacity: 0,
-        y: 100, // 初始位置在下方
-      })
-
-      gsap.to(ele, {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        delay: 0.1 * index,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: ele,
-          start: 'top 98%',
-          toggleActions: 'play reverse restart reverse',
-        },
-      })
+  document.querySelectorAll('[animation-button]').forEach((ele: any) => {
+    gsap.set(ele, {
+      opacity: 0,
+      y: 100, // 初始位置在下方
     })
+
+    gsap.to(ele, {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      // delay: 0.1 * index,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: ele,
+        start: 'top 98%',
+        toggleActions: 'play reverse restart reverse',
+      },
+    })
+  })
 
   document
     .querySelectorAll('[banner-animation-line]')
@@ -134,91 +132,86 @@ export const initAnimation = () => {
         })
       })
     })
-}
-
-export const footerAnime = () => {
-  document
-    .querySelectorAll('[data-footer-anmine]')
-    .forEach((lineElement: any) => {
-      const id = lineElement.getAttribute('id')
-      // console.log('id', id);
-      gsap.set(lineElement, {
-        opacity: 0,
-        y: 100,
-      })
-      gsap.to(lineElement, {
-        scrollTrigger: {
-          // opacity: 1,
-          trigger: id ? `#${id}` : lineElement,
-          start: 'top bottom',
-          end: '+=50',
-          scrub: true,
-          onEnter: () => {
-            gsap.to(lineElement, {
-              opacity: 1,
-              y: 0,
-              duration: 2,
-              ease: 'power2.out',
-              // stagger: 0.5,
-            })
-          },
-          onLeaveBack: () => {
-            // console.log('onLeaveBack');
-            gsap.to(lineElement, {
-              opacity: 0,
-              y: 100,
-              duration: 2,
-              ease: 'power2.out',
-              // stagger: 0.3,
-            })
-          },
-        },
-
-        duration: 1,
-        ease: 'power1.inOut',
-      })
-
-      lineElement
-        .querySelectorAll('.line')
-        .forEach((lineC: any, lineIndex: any) => {
-          // console.log('lineC', lineC);
-          gsap.set(lineC, {
-            opacity: 0,
-            y: 100 + lineIndex * 50,
-          })
-          gsap.to(lineC, {
+  document.querySelectorAll('.footer-anime').forEach((lineElement: any) => {
+    const id = lineElement.getAttribute('id')
+    // console.log('id', id);
+    gsap.set(lineElement, {
+      opacity: 0,
+      y: 100,
+    })
+    gsap.to(lineElement, {
+      scrollTrigger: {
+        // opacity: 1,
+        trigger: id ? `#${id}` : lineElement,
+        start: 'top bottom',
+        end: '+=50',
+        scrub: true,
+        onEnter: () => {
+          gsap.to(lineElement, {
             opacity: 1,
-            y: 0.1,
-            scrollTrigger: {
-              trigger: `#${id}`,
-              start: 'top bottom',
-              end: '+=50',
-              scrub: true,
-              onEnter: () => {
-                // console.log('onenter');
-                gsap.to(lineC, {
-                  opacity: 1,
-                  y: 0,
-                  duration: 2,
-                  ease: 'power2.out',
-                  // stagger: 0.3,
-                })
-              },
-              onLeaveBack: () => {
-                // console.log('onLeaveBack');
-                gsap.to(lineC, {
-                  opacity: 0,
-                  y: 300 + lineIndex * 50,
-                  duration: 2,
-                  ease: 'power2.out',
-                  // stagger: 0.3,
-                })
-              },
-            },
-            duration: 1,
-            ease: 'power1.inOut',
+            y: 0,
+            duration: 2,
+            ease: 'power2.out',
+            // stagger: 0.5,
+          })
+        },
+        onLeaveBack: () => {
+          // console.log('onLeaveBack');
+          gsap.to(lineElement, {
+            opacity: 0,
+            y: 100,
+            duration: 2,
+            ease: 'power2.out',
             // stagger: 0.3,
           })
-        })
+        },
+      },
+
+      duration: 1,
+      ease: 'power1.inOut',
     })
+
+    lineElement
+      .querySelectorAll('.line')
+      .forEach((lineC: any, lineIndex: any) => {
+        // console.log('lineC', lineC);
+        gsap.set(lineC, {
+          opacity: 0,
+          y: 100 + lineIndex * 50,
+        })
+        gsap.to(lineC, {
+          opacity: 1,
+          y: 0.1,
+          scrollTrigger: {
+            trigger: `#${id}`,
+            start: 'top bottom',
+            end: '+=50',
+            scrub: true,
+            onEnter: () => {
+              // console.log('onenter');
+              gsap.to(lineC, {
+                opacity: 1,
+                y: 0,
+                duration: 2,
+                ease: 'power2.out',
+                // stagger: 0.3,
+              })
+            },
+            onLeaveBack: () => {
+              // console.log('onLeaveBack');
+              gsap.to(lineC, {
+                opacity: 0,
+                y: 300 + lineIndex * 50,
+                duration: 2,
+                ease: 'power2.out',
+                // stagger: 0.3,
+              })
+            },
+          },
+          duration: 1,
+          ease: 'power1.inOut',
+          // stagger: 0.3,
+        })
+      })
+  })
 }

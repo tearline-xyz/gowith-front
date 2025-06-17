@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { footerAnime } from '../../utils/animation'
+import React from 'react'
 
 type Link = {
   text: string
@@ -14,15 +13,11 @@ interface ItemProps {
 const Item: React.FC<ItemProps> = ({ title, children }) => {
   return (
     <div className="space-y-[1.97rem] text-[1.8rem] text-[#676a7f] w-[16.9rem]">
-      <div data-footer-anmine="">{title}</div>
+      <div className="footer-anime">{title}</div>
 
       {children.map((item, index) => {
         return (
-          <div
-            key={index}
-            className="text-black underline"
-            data-footer-anmine=""
-          >
+          <div key={index} className="text-black underline footer-anime">
             <a href={item.href}>{item.text}</a>
           </div>
         )
@@ -32,9 +27,6 @@ const Item: React.FC<ItemProps> = ({ title, children }) => {
 }
 
 const Footer = () => {
-  useEffect(() => {
-    footerAnime()
-  })
   const links: ItemProps[] = [
     {
       title: 'Who we are',
@@ -64,11 +56,9 @@ const Footer = () => {
       <div className="py-[5.91rem] flex px-[4.4rem] font-alexandria justify-between">
         <div className="">
           <div className="flex ">
-            <div className="text-[5rem]" data-footer-anmine="">
-              Gowith.Ai
-            </div>
+            <div className="text-[5rem] footer-anime">Gowith.Ai</div>
           </div>
-          <div className="text-[1.8rem]" data-footer-anmine="">
+          <div className="text-[1.8rem] footer-anime">
             <div className="line">Execution is AI</div>
             <div className="line">From prompt to production</div>
             <div className="line">AI. Not just imagined. Delivered</div>
@@ -82,10 +72,7 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div
-        className="pt-[3.55rem] pb-[6.21rem] text-[1.8rem] font-medium text-center"
-        data-footer-anmine=""
-      >
+      <div className="pt-[3.55rem] pb-[6.21rem] text-[1.8rem] font-medium text-center footer-anime">
         Copyright © 2025 GowithAi
       </div>
     </div>
