@@ -12,9 +12,6 @@ interface ItemProps {
 }
 
 const Item: React.FC<ItemProps> = ({ title, children }) => {
-  useEffect(() => {
-    footerAnime()
-  })
   return (
     <div className="space-y-[1.97rem] text-[1.8rem] text-[#676a7f] w-[16.9rem]">
       <div data-footer-anmine="">{title}</div>
@@ -35,6 +32,9 @@ const Item: React.FC<ItemProps> = ({ title, children }) => {
 }
 
 const Footer = () => {
+  useEffect(() => {
+    footerAnime()
+  })
   const links: ItemProps[] = [
     {
       title: 'Who we are',
