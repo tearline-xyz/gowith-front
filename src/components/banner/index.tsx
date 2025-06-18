@@ -48,6 +48,7 @@ function Banner() {
           muted
           loop
           autoPlay
+          preload="auto"
           playsInline
           className="w-full h-full object-cover absolute top-0 left-0"
         />

@@ -21,16 +21,36 @@ const WhatIsGowithai = () => {
         <div className="text-[5.98rem] font-medium " animation-text="">
           <div data-word="">What is Gowithai ?</div>
         </div>
-        <div className="font-medium text-[1.8rem]" headline-anime-in-wrap="">
-          gowith.ai is operated by AI OP PTE. LTD., a Singapore-based company
-          specializing in full-stack AI development. Our team builds robust AI
-          systems — from prototype to product — covering infrastructure,
-          algorithms, interface, and automation.We offer: Custom AI solutions
-          tailored to your industry, World-class engineering execution, Real
-          products, not just proofs of concept
+        <div
+          className="font-medium text-[1.8rem] flex flex-wrap justify-center"
+          headline-anime-in-wrap=""
+        >
+          <span className="mx-1">
+            gowith.ai is operated by AI OP PTE. LTD., a Singapore-based company
+          </span>
+          <span className="mx-1">
+            specializing in full-stack AI development. Our team builds robust AI
+            systems
+          </span>
+          <span className="mx-1">
+            — from prototype to product — covering infrastructure, algorithms,
+            interface,
+          </span>
+          <span className="mx-1">
+            and automation.We offer: Custom AI solutions tailored to your
+            industry,
+          </span>
+
+          <span className="mx-1 whitespace-nowrap">World-class</span>
+          <span className="mx-1">engineering execution,</span>
+          <span className="mx-1 whitespace-nowrap">Real products</span>
+          <span className="mx-1">, not just proofs of concept</span>
         </div>
       </div>
-      <button className="text-[1.6rem] px-[5.3rem] py-[2.1rem] bg-[#f4faff] border-[0.3rem] border-solid border-[#d5ecff] underline">
+      <button
+        className="text-[1.6rem] px-[5.3rem] py-[2.1rem] bg-[#f4faff] border-[0.3rem] border-solid border-[#d5ecff] underline rounded-[1.3rem]"
+        animation-element=""
+      >
         Explore
       </button>
     </div>

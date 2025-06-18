@@ -36,6 +36,32 @@ export const initAnimation = () => {
       })
     })
   })
+
+  document
+    .querySelectorAll('[animation-element]')
+    .forEach((element: any, elementIndex: number) => {
+      // 设置初始状态
+      gsap.set(element, {
+        opacity: 0,
+        y: 200 + elementIndex * 20, // 与animation-text中的data-word使用相同的初始位移和间距
+      })
+
+      // 添加动画效果
+      gsap.to(element, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          scrub: true, // 添加平滑滚动
+          toggleActions: 'play none none none',
+        },
+      })
+    })
+
   document.querySelectorAll('[animation-button]').forEach((ele: any) => {
     gsap.set(ele, {
       opacity: 0,
