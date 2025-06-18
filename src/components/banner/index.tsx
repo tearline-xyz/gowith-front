@@ -77,6 +77,13 @@ function Banner() {
           alt=""
           className="w-full absolute bottom-[-2px] z-10 "
         />
+        <div
+          className="w-full absolute bottom-[-20px] h-[30px] z-20"
+          style={{
+            background: 'linear-gradient(to bottom, #fafafa, #ffffff)',
+            boxShadow: '0 -10px 20px rgba(250, 250, 250, 0.3)',
+          }}
+        />
       </div>
     </>
   )
