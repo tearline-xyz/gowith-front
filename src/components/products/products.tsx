@@ -43,7 +43,7 @@ const Products = () => {
     },
   ]
   return (
-    <div className="py-36 font-alexandria space-y-[3rem]">
+    <div className="py-52 font-alexandria space-y-[3rem]">
       <div
         className="space-y-[1.44rem] text-center w-[104.3rem] mx-auto"
         anime-block-wrap=""

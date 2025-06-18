@@ -7,7 +7,7 @@ const Header = () => {
           className="text-[3.2rem] font-alexandria font-medium text-[#0A1038]"
           animation-button=""
         >
-          gowith.ai
+          LETSGOWITH.AI
         </div>
       </div>
       <div className="flex gap-11">
@@ -57,7 +57,7 @@ function Banner() {
             className="font-alexandria text-[5.9883rem] w-[57.6rem] font-medium flex flex-wrap whitespace-pre"
             hero-headline=""
           >
-            <div data-word="">Go </div>
+            <div data-word="">Lets go </div>
             <div data-word="">with AI. </div>
             <div data-word="">Build </div>
             <div data-word="">the future.</div>
@@ -73,9 +73,9 @@ function Banner() {
           </div>
         </div>
         <img
-          src="/banner/Gradient.png"
+          src="/banner/Gradient.svg"
           alt=""
-          className="absolute bottom-0 z-10 "
+          className="w-full absolute bottom-[-2px] z-10 "
         />
       </div>
     </>

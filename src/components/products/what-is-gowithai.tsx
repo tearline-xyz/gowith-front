@@ -1,6 +1,6 @@
 const WhatIsGowithai = () => {
   return (
-    <div className="mt-[26.8rem] mb-[12.2rem] relative w-[70.7rem] mx-auto text-center font-alexandria">
+    <div className="mt-[26.8rem] mb-[12.2rem] relative w-[71.7rem] mx-auto text-center font-alexandria">
       <div
         className=" w-[35.4rem] h-[14.4rem] relative border-[0.1rem] border-[#bfbfbf] border-solid rounded-full flex items-center justify-center mx-auto"
         animation-button=""
@@ -19,7 +19,7 @@ const WhatIsGowithai = () => {
         anime-block-wrap=""
       >
         <div className="text-[5.98rem] font-medium " animation-text="">
-          <div data-word="">What is Gowithai ?</div>
+          <div data-word="">What is LETSGOWITHA?</div>
         </div>
         <div
           className="font-medium text-[1.8rem] flex flex-wrap justify-center"

@@ -56,7 +56,7 @@ const Footer = () => {
       <div className="py-[5.91rem] flex px-[4.4rem] font-alexandria justify-between">
         <div className="">
           <div className="flex ">
-            <div className="text-[5rem] footer-anime">Gowith.Ai</div>
+            <div className="text-[5rem] footer-anime">LETSGOWITH.AI</div>
           </div>
           <div className="text-[1.8rem] footer-anime">
             <div className="line">Execution is AI</div>
@@ -72,8 +72,8 @@ const Footer = () => {
           })}
         </div>
       </div>
-      <div className="pt-[3.55rem] pb-[6.21rem] text-[1.8rem] font-medium text-center footer-anime">
-        Copyright © 2025 GowithAi
+      <div className="pt-[3.55rem] pb-[8.21rem] text-[1.8rem] font-medium text-center footer-anime">
+        Copyright © 2025 LETSGOWITHA
       </div>
     </div>
   )
