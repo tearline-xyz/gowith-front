@@ -13,4 +13,4 @@ docker rm gowith-front-container || true
 # 运行新容器
 docker run -d -p 80:80 --name gowith-front-container gowith-front
 
-echo "部署完成，请访问 http://localhost"
+echo "Depoly successful, please visit http://localhost"
