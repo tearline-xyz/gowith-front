@@ -9,17 +9,15 @@ export const initGsap = () => {
 
 export const initAnimation = () => {
   document.querySelectorAll('[animation-text]').forEach((element: any) => {
-    // 设置初始状态
     element
       .querySelectorAll('[data-word]')
       .forEach((word: any, wordIndex: number) => {
         gsap.set(word, {
           opacity: 0,
-          y: 200 + wordIndex * 20, // 减小初始位移和间距
+          y: 200 + wordIndex * 20,
         })
       })
 
-    // 添加动画效果
     element.querySelectorAll('[data-word]').forEach((word: any) => {
       gsap.to(word, {
         opacity: 1,
@@ -30,7 +28,7 @@ export const initAnimation = () => {
           trigger: element,
           start: 'top 80%',
           end: 'bottom 20%',
-          scrub: true, // 添加平滑滚动
+          scrub: true,
           toggleActions: 'play none none none',
         },
       })
@@ -40,13 +38,11 @@ export const initAnimation = () => {
   document
     .querySelectorAll('[animation-element]')
     .forEach((element: any, elementIndex: number) => {
-      // 设置初始状态
       gsap.set(element, {
         opacity: 0,
-        y: 200 + elementIndex * 20, // 与animation-text中的data-word使用相同的初始位移和间距
+        y: 200 + elementIndex * 20,
       })
 
-      // 添加动画效果
       gsap.to(element, {
         opacity: 1,
         y: 0,
@@ -56,7 +52,7 @@ export const initAnimation = () => {
           trigger: element,
           start: 'top 80%',
           end: 'bottom 20%',
-          scrub: true, // 添加平滑滚动
+          scrub: true,
           toggleActions: 'play none none none',
         },
       })
@@ -65,14 +61,14 @@ export const initAnimation = () => {
   document.querySelectorAll('[animation-button]').forEach((ele: any) => {
     gsap.set(ele, {
       opacity: 0,
-      y: 100, // 初始位置在下方
+      y: 100,
     })
 
     gsap.to(ele, {
       opacity: 1,
       y: 0,
       duration: 0.5,
-      // delay: 0.1 * index,
+
       ease: 'power2.out',
       scrollTrigger: {
         trigger: ele,
@@ -87,7 +83,7 @@ export const initAnimation = () => {
     .forEach((ele: any, index: number) => {
       gsap.set(ele, {
         opacity: 0,
-        y: 100, // 初始位置在下方
+        y: 100,
       })
 
       gsap.to(ele, {
@@ -139,7 +135,6 @@ export const initAnimation = () => {
   document
     .querySelectorAll('[hero-headline]')
     .forEach((headlineElement: any) => {
-      // console.log('headlineElement', headlineElement);
       headlineElement
         .querySelectorAll('[data-word]')
         .forEach((word: any, wordIndex: any) => {
@@ -160,14 +155,13 @@ export const initAnimation = () => {
     })
   document.querySelectorAll('.footer-anime').forEach((lineElement: any) => {
     const id = lineElement.getAttribute('id')
-    // console.log('id', id);
+
     gsap.set(lineElement, {
       opacity: 0,
       y: 100,
     })
     gsap.to(lineElement, {
       scrollTrigger: {
-        // opacity: 1,
         trigger: id ? `#${id}` : lineElement,
         start: 'top bottom',
         end: '+=50',
@@ -182,7 +176,6 @@ export const initAnimation = () => {
           })
         },
         onLeaveBack: () => {
-          // console.log('onLeaveBack');
           gsap.to(lineElement, {
             opacity: 0,
             y: 100,
@@ -200,7 +193,6 @@ export const initAnimation = () => {
     lineElement
       .querySelectorAll('.line')
       .forEach((lineC: any, lineIndex: any) => {
-        // console.log('lineC', lineC);
         gsap.set(lineC, {
           opacity: 0,
           y: 100 + lineIndex * 50,
@@ -214,7 +206,6 @@ export const initAnimation = () => {
             end: '+=50',
             scrub: true,
             onEnter: () => {
-              // console.log('onenter');
               gsap.to(lineC, {
                 opacity: 1,
                 y: 0,
@@ -224,13 +215,11 @@ export const initAnimation = () => {
               })
             },
             onLeaveBack: () => {
-              // console.log('onLeaveBack');
               gsap.to(lineC, {
                 opacity: 0,
                 y: 300 + lineIndex * 50,
                 duration: 2,
                 ease: 'power2.out',
-                // stagger: 0.3,
               })
             },
           },
