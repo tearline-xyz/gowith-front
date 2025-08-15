@@ -3,7 +3,7 @@ export const rem = () => {
   // const w = isTg ? (window.innerWidth > 375 && window.innerWidth < 750 ? 375 : 375) : (window.innerWidth > 375 && window.innerWidth < 750 ? 375 : 1440);
   const isPc: boolean = window.innerWidth >= 768
   const s = window.innerWidth >= 1440 ? 1440 : window.innerWidth
-  // console.log(isPc,isPc ? 1440 : 375);
+  
   const size =
     (s /
       (isPc
